@@ -22,7 +22,6 @@ El proyecto utiliza un conjunto de datos de **imágenes 2D de mapas de altura ob
 ├── 📁 DataAugmentation/         # Técnicas de aumento de datos
 ├── 📁 CrossValidation/          # Validación cruzada (k-folds, temporal, aleatoria)
 ├── 📁 datasets/                 # Scripts de carga y preprocesamiento de datos
-├── 📁 results/                  # Gráficas, matrices de confusión, curvas ROC
 │
 ├── 📄 requirements.txt          # Dependencias de Python
 ├── 📄 README.md                 # Este archivo
