@@ -1,88 +1,88 @@
-# **🔬 Análisis de CNN para Detección de Defectos en Impresión 3D**
+# **🔬 CNN Analysis for Defect Detection in 3D Printing**
 
-## **📋 Descripción del Proyecto**
-Este repositorio contiene el código completo de mi **Trabajo de Fin de Grado** en el que se implementan y comparan diferentes arquitecturas de **Redes Neuronales Convolucionales (CNN)** para la clasificación automática de defectos en imágenes de superficies fabricadas mediante **manufactura aditiva (impresión 3D)**.
+## **📋 Project Description**
+This repository contains the complete code for my **Bachelor’s Thesis**, where different **Convolutional Neural Network (CNN)** architectures are implemented and compared for the automatic classification of defects in images of surfaces produced via **additive manufacturing (3D printing)**.
 
-El proyecto utiliza un conjunto de datos de **imágenes 2D de mapas de altura obtenidos mediante escáner láser 🔍** para detectar y clasificar cuatro tipos de condiciones:
+The project uses a dataset of **2D height map images obtained via laser scanning 🔍** to detect and classify four types of conditions:
 
-- ✅ **OK** – Material correcto  
-- ⚠️ **Under** – Falta de material  
-- ❌ **Over** – Exceso de material  
-- 🔲 **Empty** – Zona vacía  
+- ✅ **OK** – Correct material  
+- ⚠️ **Under** – Lack of material  
+- ❌ **Over** – Excess material  
+- 🔲 **Empty** – Empty area  
 
 ---
 
-## **🗂️ Estructura del Repositorio**
+## **🗂️ Repository Structure**
 ```text
 📁 TFG_MARTIN_LORING/
 │
-├── 📁 ScratchVPreentrenados/    # Comparación: desde cero vs. preentrenadas
-├── 📁 Modelos Preentrenados/    # Evaluación de modelos preentrenados
-├── 📁 Hyperparameters/          # Optimización de hiperparámetros
-├── 📁 DataAugmentation/         # Técnicas de aumento de datos
-├── 📁 CrossValidation/          # Validación cruzada (k-folds, temporal, aleatoria)
-├── 📁 datasets/                 # Scripts de carga y preprocesamiento de datos
+├── 📁 ScratchVPretrained/        # Comparison: from scratch vs. pretrained
+├── 📁 PretrainedModels/          # Evaluation of pretrained models
+├── 📁 Hyperparameters/           # Hyperparameter optimization
+├── 📁 DataAugmentation/          # Data augmentation techniques
+├── 📁 CrossValidation/           # Cross-validation (k-folds, temporal, random)
+├── 📁 datasets/                  # Data loading and preprocessing scripts
 │
-├── 📄 requirements.txt          # Dependencias de Python
-├── 📄 README.md                 # Este archivo
-└── 📄 TFG_MARTIN_LORING.pdf     # Memoria del trabajo
+├── 📄 requirements.txt           # Python dependencies
+├── 📄 README.md                  # This file
+└── 📄 TFG_MARTIN_LORING.pdf      # Thesis document
 ```
 
-## **🚀 Tecnologías y Conceptos Aplicados**
+## **🚀 Technologies and Applied Concepts**
 
-### **Tecnologías**
-| **Tecnología**           | **Aplicación**                          |
-|---------------------------|-----------------------------------------|
-| **Python 🐍**             | **Lenguaje principal**                  |
-| **PyTorch 🧠**            | **Framework de deep learning**          |
-| **Google Colab ☁️**       | **Entorno de ejecución con GPU**        |
-| **Scikit-learn 📊**       | **Métricas y evaluación**               |
-| **Matplotlib/Seaborn 📉** | **Visualización de resultados**         |
-| **OpenCV 👁️**             | **Procesamiento de imágenes**           |
+### **Technologies**
+| **Technology**           | **Application**                           |
+|---------------------------|------------------------------------------|
+| **Python 🐍**             | **Main programming language**            |
+| **PyTorch 🧠**            | **Deep learning framework**              |
+| **Google Colab ☁️**       | **Execution environment with GPU**       |
+| **Scikit-learn 📊**       | **Metrics and evaluation**               |
+| **Matplotlib/Seaborn 📉** | **Results visualization**                |
+| **OpenCV 👁️**             | **Image processing**                     |
 
-### **🧠 Conceptos de IA Implementados**
-- 🔄 **Transfer Learning** con modelos preentrenados (**ResNet, AlexNet, VGG, Inception, DenseNet, SqueezeNet**)  
-- ⚙️ **Optimización de hiperparámetros** (**learning rate, optimizadores: SGD, Adam, Adagrad, Adadelta**)  
-- 🌀 **Data Augmentation** con **PyTorch** e **imgaug**  
-- 🔁 **Validación cruzada** (**k-folds, temporal y aleatoria**)  
-- 📊 **Métricas avanzadas**: **matrices de confusión, curvas ROC (OvR y OvO), precisión, pérdida**  
-
----
-
-## **📊 Métodos de Evaluación**
-Cada experimento incluye:  
-
-| **Métrica**               | **Visualización**                                   |
-|----------------------------|-----------------------------------------------------|
-| **Precisión y pérdida**    | **Gráficas de evolución durante entrenamiento**     |
-| **Matrices de confusión**  | **Análisis detallado por clase**                    |
-| **Curvas ROC**             | **Cálculo de AUC por clase**                        |
-| **Tiempo de entrenamiento**| **Comparativa de eficiencia**                       |
+### **🧠 AI Concepts Implemented**
+- 🔄 **Transfer Learning** with pretrained models (**ResNet, AlexNet, VGG, Inception, DenseNet, SqueezeNet**)  
+- ⚙️ **Hyperparameter optimization** (**learning rate, optimizers: SGD, Adam, Adagrad, Adadelta**)  
+- 🌀 **Data Augmentation** using **PyTorch** and **imgaug**  
+- 🔁 **Cross-validation** (**k-folds, temporal, and random**)  
+- 📊 **Advanced metrics**: **confusion matrices, ROC curves (OvR and OvO), accuracy, loss**  
 
 ---
 
-## **🏆 Resultados Destacados**
-- ✅ **ResNet18** obtuvo la mejor relación **precisión/tiempo**: ~**84% de precisión en validación**  
-- 📈 **Data augmentation** con transformaciones simples **mejoró la generalización**  
-- 🔁 **Validación cruzada con k-folds** mostró la mayor **robustez y mejor AUC** en la clasificación crítica (**Under vs Over**)  
-- ⚡ **Modelos preentrenados** superaron consistentemente a los entrenados desde cero  
+## **📊 Evaluation Methods**
+Each experiment includes:  
+
+| **Metric**                | **Visualization**                                   |
+|----------------------------|----------------------------------------------------|
+| **Accuracy and Loss**      | **Training evolution graphs**                      |
+| **Confusion Matrices**     | **Detailed class-wise analysis**                   |
+| **ROC Curves**             | **AUC calculation per class**                      |
+| **Training Time**          | **Efficiency comparison**                           |
 
 ---
 
-## **🎓 Conclusiones**
-Este trabajo demostró la viabilidad de usar **redes neuronales convolucionales (CNN)** para la **detección automática de defectos en impresión 3D**, con aplicaciones en:
-
-- ✅ **Control de calidad automatizado en manufactura aditiva**  
-- ⚡ **Inspección en línea de piezas impresas**  
-- 📊 **Optimización de parámetros de postprocesado (lijado, relleno)**  
-- 🔍 **Sistemas de retroalimentación en tiempo real**  
+## **🏆 Key Results**
+- ✅ **ResNet18** achieved the best **accuracy/time ratio**: ~**84% validation accuracy**  
+- 📈 **Data augmentation** with simple transformations **improved generalization**  
+- 🔁 **K-fold cross-validation** showed the highest **robustness and best AUC** for critical classification (**Under vs Over**)  
+- ⚡ **Pretrained models** consistently outperformed models trained from scratch  
 
 ---
 
-## **👨‍🎓 Autor**
+## **🎓 Conclusions**
+This work demonstrated the feasibility of using **convolutional neural networks (CNNs)** for **automatic defect detection in 3D printing**, with applications in:
+
+- ✅ **Automated quality control in additive manufacturing**  
+- ⚡ **Inline inspection of printed parts**  
+- 📊 **Optimization of post-processing parameters (sanding, filling)**  
+- 🔍 **Real-time feedback systems**  
+
+---
+
+## **👨‍🎓 Author**
 **Martín Loring Bueno**  
-**Grado en Ingeniería en Tecnologías Industriales**  
-**Universidad de Málaga – Junio 2023**  
-**Tutores:** *Ezequiel López Rubio e Iván Gómez Gallego*  
+**Bachelor’s in Industrial Technologies Engineering**  
+**University of Málaga – June 2023**  
+**Supervisors:** *Ezequiel López Rubio and Iván Gómez Gallego*  
 
-📧 **Contacto:** [martin.loringbueno@hotmail.com](mailto:martin.loringbueno@hotmail.coms) · **[LinkedIn](https:/www.linkedin.com/in/martin-loring-bueno-830886233)**
+📧 **Contact:** [martin.loringbueno@hotmail.com](mailto:martin.loringbueno@hotmail.com) · **[LinkedIn](https://www.linkedin.com/in/martin-loring-bueno-830886233)**
